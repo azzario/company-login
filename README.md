@@ -2,6 +2,9 @@
 
 > A simple login page for company by me
 
+# Screenshot
+![alt text](https://github.com/azzario/company-login/blob/master/src/assets/login-company.gif)
+
 ## Build Setup
 
 ``` bash
