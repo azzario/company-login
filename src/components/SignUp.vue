@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="signup">
     <div class="left-side left">
       <div class="wrap-title">
         <h1>Your Company.</h1>
@@ -8,8 +8,8 @@
     </div>
     <div class="right-side right">
       <div class="wrap-form">
-        <h1>Login</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. <a href="#" v-on:click="redirectToSignup">Sign up here</a></p>
+        <h1>Signup</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. <a href="#" v-on:click="redirectToSignin">Sign in here</a></p>
         <div class="row">
           <form class="col s12">
             <div class="row">
@@ -24,19 +24,13 @@
                 <label for="password">Password</label>
               </div>
             </div>
-            <p>
-              <label>
-                <input type="checkbox" class="filled-in"/>
-                <span>Remember me</span>
-              </label>
-            </p>
-            <a class="waves-effect waves-light btn-large btn-login">LOGIN</a>
-            <div class="wrap-btn-social">
-              <p>Login with social media</p>
-              <a class="waves-effect waves-light btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
-              <a class="waves-effect waves-light btn btn-google-plus"><i class="fa fa-google-plus"></i> Google +</a>
-              <a class="waves-effect waves-light btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password-validate" type="password" class="validate">
+                <label for="password-validate">Re type password</label>
+              </div>
             </div>
+            <a class="waves-effect waves-light btn-large btn-signup">SIGNUP</a>
           </form>
         </div>
       </div>
@@ -46,10 +40,10 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: 'SignUp',
   methods: {
-    redirectToSignup: function() {
-      this.$router.push('/signup');
+    redirectToSignin: function() {
+      this.$router.push('/');
     }
   }
 }
@@ -58,7 +52,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-  .login {
+  .signup {
     width: 900px;
     height: 600px;
     margin: 20px auto;
@@ -116,25 +110,7 @@ export default {
     color: grey;
   }
 
-  .btn-login {
+  .btn-signup {
     float: right;
-  }
-
-  .wrap-btn-social {
-    clear: both;
-    float: left;
-    margin-top: 70px;
-  }
-
-  .btn-facebook {
-    background-color: #3b5998;
-  }
-
-  .btn-google-plus {
-    background-color: #dd4b39;
-  }
-
-  .btn-twitter {
-    background-color: #00aced;
   }
 </style>
