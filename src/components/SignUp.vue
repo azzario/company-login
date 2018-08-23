@@ -20,13 +20,13 @@
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
+                <input id="password" type="password" class="validate" v-model="password">
                 <label for="password">Password</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="password-validate" type="password" class="validate">
+                <input id="password-validate" type="password" class="validate" v-bind:class="{ invalid: isPasswordNotSame }" v-on:input="watchPassword" v-model="passwordValidate">
                 <label for="password-validate">Re type password</label>
               </div>
             </div>
@@ -41,9 +41,23 @@
 <script>
 export default {
   name: 'SignUp',
+  data: function() {
+    return {
+        password: '',
+        passwordValidate: '',
+        isPasswordNotSame: false
+    }
+  },
   methods: {
     redirectToSignin: function() {
       this.$router.push('/');
+    },
+    watchPassword: function() {
+      if(this.passwordValidate != this.password) {
+        this.isPasswordNotSame = true;
+      } else {
+        this.isPasswordNotSame = false;
+      }
     }
   }
 }
