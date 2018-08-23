@@ -56,11 +56,12 @@ export default {
   .login {
     width: 900px;
     height: 600px;
-    margin: 20px auto;
+    margin: 35px auto;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+    box-shadow: 0 3px 16px -5px #070707;
+    z-index: 10;
   }
 
   .left-side {
@@ -68,9 +69,9 @@ export default {
     background-position: center;
     height: 100%;
     width: 50%;
-    border-radius: 10px 0 0 10px;
-    -moz-border-radius: 10px 0 0 10px;
-    -webkit-border-radius: 10px 0 0 10px;
+    border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;
     position: relative;
   }
 
@@ -78,15 +79,15 @@ export default {
     height: 100%;
     width: 50%;
     background-color: white;
-    border-radius: 0 10px 10px 0;
-    -moz-border-radius: 0 10px 10px 0;
-    -webkit-border-radius: 0 10px 10px 0;
+    border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
   }
 
   .wrap-title {
     position: absolute;
     top: 150px;
-    left: 30px;
+    left: 25px;
   }
 
   .left-side h1 {
